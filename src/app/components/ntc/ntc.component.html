@@ -6,7 +6,7 @@
 
 
 <label for="prefix">Prefix:</label>
-<input type="prefix" />
+<input type="prefix" (keyup)="prefix($event)"/>
 
 
 <p>
@@ -34,3 +34,11 @@
         </tbody>
     </table>
 </div>
+
+
+
+<pre class="card card-block card-header mb-3">Model: {{selected | json}}</pre>
+<input [(ngModel)]="selected"
+       [typeahead]="states"
+       class="form-control">
+
