@@ -1,0 +1,36 @@
+<p>
+  ntc works!
+</p>
+
+<h1>Welcome to Name that Color</h1>
+
+
+<label for="prefix">Prefix:</label>
+<input type="prefix" />
+
+
+<p>
+    Enter HEX and get a color name back
+</p>
+<label for="hex">Hex:</label>
+<input type="hex" maxlength="7" />
+
+
+<div class="ntc-table">
+    <table >
+        <thead>
+            <th>HEX</th>
+            <th>Name</th>
+            <th>Exact Match</th>
+            <th>SASS Name</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let color of colors">
+                <td>{{color.hex}}</td>
+                <td>{{color.name}}</td>
+                <td>{{color.match}}</td>
+                <td><pre>{{color.sass}}</pre></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
